@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crayon'd Backup</title>
+
+
+  <!-- Custom Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+    .card-custom {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-10px);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      color: #0d6efd;
+      margin-bottom: 1rem;
+    }
+
+    .build_products_title {
+      font-family: 'Lato', sans-serif;
+    }
+
+    .card_icon {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    .card {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .chip {
+      white-space: nowrap;
+    }
+
+    .chip_text {
+      font-size: 0.875rem;
+      color: #000;
+    }
+
+    .transition-all {
+      transition: all 0.8s ease-out;
+    }
+
+    .opacity-0 {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .fade-in-up {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  </style>
+
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="Components/images/crayond.jpg" alt="logo-crayond" class="img-fluid" style="max-width: 100px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-dark" href="#">Fixed Bid</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#">Who We Are</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#">Resources</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#">Contact</a></li>
+        </ul>
+        <button class="btn btn-outline-primary fw-bold ms-lg-3 mt-2 mt-lg-0" style="border-color: #6f42c1; color: #6f42c1;">
+          SCHEDULE A CALL
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- Spacing -->
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- main first text Section -->
+<section class="text-center py-5 px-3 bg-white">
+  <div class="container">
+    <div class="banner_text_1 fw-bold text-center">
+      <p class="mb-0 display-6 fw-bold" style="font-family: 'Graphik', sans-serif;">
+        We help startups and enterprises build products <br class="d-none d-md-block">
+        <span class="d-inline-block px-2 py-1 rounded h1" style="background-color: #E0E4FA;">usable</span>,
+        <span class="d-inline-block px-2 py-1 rounded h1" style="background-color:#FFF3E4;">blazing fast</span>,
+        <span class="d-inline-block px-2 py-1 rounded h1" style="background-color:#FAE5EF;">bug-free</span>,
+        <br class="d-none d-md-block">
+        <span class="d-inline-block px-2 py-1 rounded h1" style="background-color:#E5FBF3;">secure</span> and
+        <span class="d-inline-block px-2 py-1 rounded h1" style="background-color:#f5e5fb;">scalable</span>
+      </p>
+
+    </div>
+    <p class="mt-3 text-secondary fs-5">
+      Product engineering, done right. 100% risk-free, expert results guaranteed.
+    </p>
+  </div>
+  <div>
+    <button class="btn fw-bold me-3" style="background-color: #6f42c1; color: white; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+      VIEW PLANS
+    </button>
+    <button class="btn btn-outline-primary fw-bold" style="border-color: #6f42c1; color: #6f42c1;">
+      SCHEDULE A CALL
+    </button>
+  </div>
+</section>
+
+
+<!-- Background Section with Buttons -->
+<section
+        class="d-flex align-items-center justify-content-center text-center"
+        style="
+    background: url('Components/images/Screenshot 2025-05-26 142525.png') no-repeat top center;
+    background-size: cover;
+    min-height: 450px;
+    width: 100%;
+  "
+>
+  <!--    <div>-->
+  <!--        <button class="btn fw-bold me-3" style="background-color: #6f42c1; color: white; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">-->
+  <!--            VIEW PLANS-->
+  <!--        </button>-->
+  <!--        <button class="btn btn-outline-primary fw-bold" style="border-color: #6f42c1; color: #6f42c1;">-->
+  <!--            SCHEDULE A CALL-->
+  <!--        </button>-->
+  <!--    </div>-->
+</section>
+
+
+<!-- 10 years-->
+<section class="py-5 bg-white text-center">
+  <div class="container">
+
+    <!-- 10 years logooo -->
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 mb-5">
+      <img src="Components/images/unbea10.png" alt="Funera10 Logo" class="img-fluid" style="height: 40px;">
+      <p class="mb-0 fw-semibold text-dark" style="max-width: 600px;">
+        Celebrating <strong>10 years</strong> of product excellence. Super happy for the love and trust from everyone.
+      </p>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<!-- Trusted Brands Section -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Brands Who Trusted Us</h2>
+
+    <!-- Logo Grid -->
+    <div class="row justify-content-center g-4">
+      <!-- Repeat this block for each brand -->
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/crayond.jpg" alt="Brand 1" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/3d9388b54161474f86889e0d535a464a.png" alt="Brand 2" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/8a3e43e2622a461fddc179bd16c79cc1-removebg-preview.png" alt="Brand 3" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/20230921_204057.png" alt="Brand 4" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/d2fa6efc2547b94ab0d914097465f6c1.png" alt="Brand 5" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/eknld-removebg-preview.png" alt="Brand 7" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/Illuminate_24 Colorreview.png" alt="Brand 8" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/Kpr Color.png" alt="Brand 9" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/WEC Logo E-Celll KITCoEK.png" alt="Brand 10" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/crayond.jpg" alt="Brand 1" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/3d9388b54161474f86889e0d535a464a.png" alt="Brand 2" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/8a3e43e2622a461fddc179bd16c79cc1-removebg-preview.png" alt="Brand 3" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/20230921_204057.png" alt="Brand 4" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/d2fa6efc2547b94ab0d914097465f6c1.png" alt="Brand 5" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/eknld-removebg-preview.png" alt="Brand 7" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/Illuminate_24 Colorreview.png" alt="Brand 8" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/Kpr Color.png" alt="Brand 9" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/WEC Logo E-Celll KITCoEK.png" alt="Brand 10" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/crayond.jpg" alt="Brand 1" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/3d9388b54161474f86889e0d535a464a.png" alt="Brand 2" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/8a3e43e2622a461fddc179bd16c79cc1-removebg-preview.png" alt="Brand 3" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/20230921_204057.png" alt="Brand 4" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/d2fa6efc2547b94ab0d914097465f6c1.png" alt="Brand 5" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/eknld-removebg-preview.png" alt="Brand 7" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/Illuminate_24 Colorreview.png" alt="Brand 8" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/Kpr Color.png" alt="Brand 9" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/WEC Logo E-Celll KITCoEK.png" alt="Brand 10" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/crayond.jpg" alt="Brand 1" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/3d9388b54161474f86889e0d535a464a.png" alt="Brand 2" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/8a3e43e2622a461fddc179bd16c79cc1-removebg-preview.png" alt="Brand 3" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/20230921_204057.png" alt="Brand 4" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/d2fa6efc2547b94ab0d914097465f6c1.png" alt="Brand 5" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/eknld-removebg-preview.png" alt="Brand 7" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/Illuminate_24 Colorreview.png" alt="Brand 8" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/Kpr Color.png" alt="Brand 9" class="img-fluid" style="max-height: 50px;">
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center align-items-center">
+        <img src="Components/images/WEC Logo E-Celll KITCoEK.png" alt="Brand 10" class="img-fluid" style="max-height: 50px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section with purple background and image inside -->
+<section class="py-5 position-relative" style="background-color: #242438;">
+  <div class="container text-center text-white">
+    <h3 class="fw-bold mb-3 fs-2">
+      Don't let the challenges of building a product team slow you down. <br>
+      Let us help you achieve your goals
+    </h3>
+    <h6 class="text-white-50 mb-5">
+      Here’s a new way to build good products.
+    </h6>
+
+    <!-- need face solve Image -->
+    <div class="d-flex justify-content-center">
+      <img
+              src="Components\images\Second_Section _Image_Web.png"
+              alt="Web Illustration"
+              class="img-fluid d-none d-md-block"
+      >
+    </div>
+  </div>
+
+
+  <!-- Decorative Dots -->
+  <img src="Components/images/leftDoted.svg" alt="Right Decoration"
+       class="position-absolute top-0 start-0 mt-5 ms-3 d-none d-md-block"
+       style="width: 150px;">
+  <img src="Components/images/leftDoted.svg" alt="Left Decoration"
+       class="position-absolute bottom-0 end-0 mb-3 me-3 d-none d-md-block"
+       style="width: 150px;">
+</section>
+
+
+<!-- Offering Products Section -->
+  <section class="offering_products py-5">
+    <div class="container text-center mb-4 opacity-0 transition-all">
+      <h3 class="fw-bold">Our Offerings</h3>
+      <h6 class="text-muted">From idea & problem-solving to launch, we've got you covered.</h6>
+    </div>
+
+    <div class="container opacity-0 transition-all">
+      <div class="row justify-content-center g-4">
+        <!-- UI/UX Card -->
+        <div class="col-md-4 d-flex opacity-0 transition-all">
+          <div class="card p-4 border-0 rounded-3 w-100" style="background-color: #E5FBF3; max-width: 350px;">
+            <h4 class="fw-semibold mb-3" style="font-size: 1.5rem; color: #000;">UI/UX</h4>
+            <p class="text-body" style="font-size: 14px; line-height: 24px;">
+              Craft your idea into a delightful product experience to solve user problems with our expert design team.
+            </p>
+          </div>
+        </div>
+
+        <!-- Full-Stack Development Card -->
+        <div class="col-md-4 d-flex opacity-0 transition-all">
+          <div class="card p-4 border-0 rounded-3 w-100" style="background-color: #FFF3E4; max-width: 350px;">
+            <h4 class="fw-semibold mb-3" style="font-size: 1.5rem; color: #000;">Full-Stack Development</h4>
+            <p class="text-body" style="font-size: 14px; line-height: 24px;">
+              Launch your idea into a world-class product or modernize systems through front-end, back-end engineering, and DevOps.
+            </p>
+          </div>
+        </div>
+
+        <!-- Front-End Development Card -->
+        <div class="col-md-4 d-flex opacity-0 transition-all">
+          <div class="card p-4 border-0 rounded-3 w-100" style="background-color: #F5E5FB; max-width: 350px;">
+            <h4 class="fw-semibold mb-3" style="font-size: 1.5rem; color: #000;">Front-End Development</h4>
+            <p class="text-body" style="font-size: 14px; line-height: 24px;">
+              Build beautiful, usable interfaces on web & mobile, integrating them seamlessly with APIs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Benefits Section -->
+  <section class="build_products py-5 mt-4" style="background-color: #f9f9fd;">
+    <div class="container text-center mb-4">
+      <h3 class="build_products_title fw-bold" style="font-size: 2.2rem; line-height: 2.75rem; color: #000;">
+        Benefits you’ll love
+      </h3>
+      <h6 class="build_products_sub_title fw-semibold text-muted" style="font-size: 16px; line-height: 24px;">
+        And moreover, comfortably repeatable.
+      </h6>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4 d-flex">
+          <div class="card p-4 border-0 rounded-3 w-100 text-center" data-aos="zoom-in" data-aos-delay="100">
+            <img alt="Affordable Icon" class="card_icon mx-auto mb-3" src="components/images/happyIcon.svg">
+            <h4 class="card_title mb-3" style="font-size: 1.6rem; font-weight: 600; color: #000;">Affordable</h4>
+            <p class="text-body">High-quality product engineering services that fits your budget, without compromising on quality.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+          <div class="card p-4 border-0 rounded-3 w-100 text-center" data-aos="zoom-in" data-aos-delay="200">
+            <img alt="Risk-free Icon" class="card_icon mx-auto mb-3" src="components/images/winkIcon.svg">
+            <h4 class="card_title mb-3" style="font-size: 1.6rem; font-weight: 600; color: #000;">Risk-free</h4>
+            <p class="text-body">Zero risks in terms of talent, scalability, and quality. Pay only for what you need, without any commitments.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex">
+          <div class="card p-4 border-0 rounded-3 w-100 text-center" data-aos="zoom-in" data-aos-delay="300">
+            <img alt="Flexible Icon" class="card_icon mx-auto mb-3" src="components/images/coolIcon.svg">
+            <h4 class="card_title mb-3" style="font-size: 1.6rem; font-weight: 600; color: #000;">Flexible</h4>
+            <p class="text-body">Product engineering services that can be scaled up or down as per your needs, do it the right way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrolling Text -->
+    <div class="container-fluid mt-5 px-0 overflow-hidden">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        <div class="d-flex flex-nowrap gap-3 px-2">
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Modern engineering</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Delightful experience</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Faster to the market</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Truly built for customers</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Full ownership of actions</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Bug-free delivery</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Best of standards</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Automated assessments</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Minimal tech debt</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Frameworks to SaaSify</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Completely agile</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Secure and scalable</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Idea to product</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Matured deliveryops</p></div>
+          <div class="chip bg-light border rounded-pill px-3 py-2"><p class="chip_text mb-0">Collaborative and as one team</p></div>
+        </div>
+      </marquee>
+    </div>
+  </section>
+
+
+
+  <section class="footer py-5 bg-light">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- Logo & CTA -->
+        <div class="col-12 col-md-3">
+          <h2 class="h5 mb-3">Ready to make something amazing?</h2>
+          <button onclick="goToCalendly()" class="btn btn-primary mb-3">GET STARTED</button>
+          <a href="/" class="d-block mb-2">
+
+          </a>
+          <p class="mb-0 small">© Crayond Digital Pvt. Ltd.</p>
+          <p class="small">All rights reserved</p>
+        </div>
+
+        <!-- Company -->
+        <div class="col-12 col-md-3">
+          <h5 class="fw-bold mb-3">Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="/fixed-bid" class="text-decoration-none text-dark d-block mb-2">Fixed Bid</a></li>
+            <li><a href="/who-we-are" class="text-decoration-none text-dark d-block mb-2">Who We Are</a></li>
+            <li><a href="/contact" class="text-decoration-none text-dark d-block">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="col-12 col-md-3">
+          <h5 class="fw-bold mb-3">Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="/accelerators_and_investors" class="text-decoration-none text-dark d-block mb-2">For Accelerators & Investors</a></li>
+            <li><a href="https://www.crayond.com/blog" class="text-decoration-none text-dark d-block mb-2">Blog</a></li>
+            <li><a href="/glossary" class="text-decoration-none text-dark d-block mb-2">Glossary</a></li>
+            <li><a href="/saas-metrics/index" class="text-decoration-none text-dark d-block mb-2">SaaS Metrics</a></li>
+            <li><a href="/case-studies" class="text-decoration-none text-dark d-block">Case Studies</a></li>
+          </ul>
+        </div>
+
+        <!-- Ultimate Guides -->
+        <div class="col-12 col-md-3">
+          <h5 class="fw-bold mb-3">Ultimate Guides</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://www.crayond.com/blog/design-sprint/?utm_source=footer" class="text-decoration-none text-dark d-block mb-2">Design Sprint</a></li>
+            <li><a href="https://www.crayond.com/blog/the-aha-moment-guide/?utm_source=footer" class="text-decoration-none text-dark d-block mb-2">Aha Moment</a></li>
+            <li><a href="https://www.crayond.com/blog/what-is-the-cost-to-build-a-saas-product/?utm_source=footer" class="text-decoration-none text-dark d-block mb-2">Cost To Build a SaaS Product</a></li>
+            <li><a href="https://www.crayond.com/blog/product-development/?utm_source=footer" class="text-decoration-none text-dark d-block mb-2">Product Development</a></li>
+            <li><a href="https://www.crayond.com/blog/top-8-saas-frameworks-to-power-your-next-product/?utm_source=footer" class="text-decoration-none text-dark d-block">SaaS Framework</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Social Media -->
+      <div class="row mt-4">
+        <div class="col-12 d-flex gap-3">
+          <a href="https://www.linkedin.com/company/crayond/" target="_blank" class="text-dark"><i class="fa fa-linkedin fa-lg"></i></a>
+          <a href="https://www.facebook.com/CrayonDigital/" target="_blank" class="text-dark"><i class="fa fa-facebook fa-lg"></i></a>
+          <a href="https://www.instagram.com/crayondofficial/" target="_blank" class="text-dark"><i class="fa fa-instagram fa-lg"></i></a>
+          <a href="https://twitter.com/crayondofficial" target="_blank" class="text-dark"><i class="fa fa-twitter fa-lg"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="row mt-4 pt-3 border-top">
+        <div class="col-md-4 d-flex gap-3">
+          <a href="/privacy" class="text-muted small text-decoration-none border-end pe-2">Privacy</a>
+          <a href="/gdpr" class="text-muted small text-decoration-none">GDPR</a>
+        </div>
+        <div class="col-md-2">
+          <a href="mailto:hello@crayond.com" class="text-dark small text-decoration-none">hello@crayond.com</a>
+        </div>
+        <div class="col-md-2">
+          <a href="https://wa.me/+917448390100" class="text-dark small text-decoration-none">+(91) 74483 90100</a>
+        </div>
+        <div class="col-md-4">
+          <p class="small text-dark mb-0">2/498, Ayshika, Sunrise Avenue 2nd Cross Street, Neelankarai, Chennai, India</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-up');
+          observer.unobserve(entry.target); // Animate once
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.opacity-0').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
