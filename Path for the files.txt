@@ -1,0 +1,6 @@
+/project-folder
+  ├── index.html
+  ├── /css
+  │    └── style.css
+  └── /images
+       └── [save all required images]

@@ -1,0 +1,18 @@
+<!-- header.html -->
+
+
+<!-- JavaScript to hide header on scroll down and show on scroll up -->
+<script>
+  let prevScrollPos = window.pageYOffset;
+  const navBar = document.getElementById("navBar");
+
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+      navBar.style.top = "0";
+    } else {
+      navBar.style.top = "-100px";
+    }
+    prevScrollPos = currentScrollPos;
+  }
+</script>

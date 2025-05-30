@@ -1,0 +1,65 @@
+.banner_text_1 {
+    font-size: 5.25rem;
+    font-weight: bold;
+}
+.banner_text_1 p {
+    color: #2b2a35;
+}
+
+.first_section_new .banner_text_1 p {
+    margin-bottom: 0.75rem;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+}
+.banner_text_1 {
+    font-size: 3.25rem;
+}
+@media only screen and (max-width: 768px) {
+    .header_text .banner_text_1 {
+        font-size: 2rem !important;
+    }
+}
+
+.header_mobile .header_text .banner_text_1 {
+    font-size: 3.25rem;
+}
+
+
+
+@font-face {
+    font-family: 'Alito Arabic';
+    src: url('fonts/AlitoArabic-Bold.woff2') format('woff2');
+    font-weight: bold;
+}
+
+
+.custom-price {
+    background-color: #665cd7;
+    color: white;
+    border-radius: 0.6rem;
+    padding: 1rem 8rem;
+    width: 195px; /* Set fixed width */
+}
+
+.custom-talk {
+    background-color: white;
+    color: #6c64e0;
+    border: 1px solid #6c64e0;
+    border-radius: 0.5rem;
+    transition: 0.6s ease-in-out;
+    width: 195px; /* Set fixed width */
+}
+
+.custom-talk:hover {
+    background-color: #6c64e0;
+    color: white;
+}
+
+.custom-talk:hover::before,
+.custom-talk:hover::after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: 0.7s;
+}
+
