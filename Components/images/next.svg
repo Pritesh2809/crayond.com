@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #665cd7;
+        stroke: #665cd7;
+      }
+    </style>
+  </defs>
+  <path id="icons8-next-page_1_" data-name="icons8-next-page (1)" class="cls-1" d="M24,4A20,20,0,1,0,44,24,20.023,20.023,0,0,0,24,4Zm0,3A17,17,0,1,1,7,24,16.977,16.977,0,0,1,24,7Zm-4.016,6.984A1.5,1.5,0,0,0,18.94,16.56l6.939,6.94L18.94,30.44a1.5,1.5,0,1,0,2.121,2.121l8-8a1.5,1.5,0,0,0,0-2.121l-8-8a1.5,1.5,0,0,0-1.076-.455Z" transform="translate(-3.5 -3.5)"/>
+</svg>

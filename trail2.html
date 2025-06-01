@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wizarding World</title>
+
+  <!-- Fonts and Styles -->
+  <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #000000, #1a1a1a);
+      color: #f5f5f5;
+      overflow-x: hidden;
+      cursor: url('https://cur.cursors-4u.net/movies/mov-2/mov146.cur'), auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: url('https://wallpaperaccess.com/full/2637581.jpg') no-repeat center center/cover;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 4em;
+      margin-bottom: 20px;
+      font-family: 'Harry Potter', serif;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      font-family: 'Harry Potter', serif;
+    }
+
+    .spell-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #7f5af0;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(127, 90, 240, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .spell-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(127, 90, 240, 0.8);
+    }
+
+    .spells-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .spell-card {
+      width: 220px;
+    }
+
+    .magic-particle {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: fadeOut 1s forwards;
+      box-shadow: 0 0 10px 2px #a66bff;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+
+    .floating-candle {
+      position: fixed;
+      top: -50px;
+      width: 10px;
+      height: 30px;
+      background: #fff5c3;
+      border-radius: 5px;
+      box-shadow: 0 0 15px #ffeb3b;
+      animation: floatCandle 12s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes floatCandle {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(120vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Welcome to Hogwarts</h1>
+  <p>Discover the magic within you.</p>
+</div>
+
+<div class="section">
+  <h2>Learn Spells</h2>
+  <div class="spells-grid">
+    <div class="spell-card"><h3>Lumos</h3><p>Lights up your wand tip.</p></div>
+    <div class="spell-card"><h3>Expelliarmus</h3><p>Disarms your opponent.</p></div>
+    <div class="spell-card"><h3>Accio</h3><p>Summons an object.</p></div>
+    <div class="spell-card"><h3>Expecto Patronum</h3><p>Conjures a Patronus.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Hogwarts Houses</h2>
+  <div class="spells-grid">
+    <div class="spell-card" style="border-color: #740001; background: #ae0001;">
+      <h3>Gryffindor</h3>
+      <p>Bravery, courage, and chivalry.</p>
+    </div>
+    <div class="spell-card" style="border-color: #2a623d; background: #1a472a;">
+      <h3>Slytherin</h3>
+      <p>Ambition, cunning, and resourcefulness.</p>
+    </div>
+    <div class="spell-card" style="border-color: #ecb939; background: #f0c75e;">
+      <h3>Hufflepuff</h3>
+      <p>Loyalty, patience, and dedication.</p>
+    </div>
+    <div class="spell-card" style="border-color: #0e1a40; background: #222f5b;">
+      <h3>Ravenclaw</h3>
+      <p>Wisdom, wit, and learning.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Optional Background Music -->
+<!--
+<audio autoplay loop>
+  <source src="harrypotter-theme.mp3" type="audio/mpeg">
+</audio>
+-->
+
+<script>
+  // Magic particle trail
+  document.addEventListener("mousemove", function (e) {
+    const particle = document.createElement("div");
+    particle.className = "magic-particle";
+    particle.style.left = e.pageX + "px";
+    particle.style.top = e.pageY + "px";
+    document.body.appendChild(particle);
+    setTimeout(() => {
+      particle.remove();
+    }, 1000);
+  });
+
+  // Floating candles
+  for (let i = 0; i < 30; i++) {
+    const candle = document.createElement("div");
+    candle.className = "floating-candle";
+    candle.style.left = Math.random() * 100 + "vw";
+    candle.style.animationDelay = (Math.random() * 10) + "s";
+    document.body.appendChild(candle);
+  }
+</script>
+
+</body>
+</html>

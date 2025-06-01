@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Pritesh RS - Creative Developer & Designer Portfolio with stunning cursor effects and interactive design."/>
+  <title>Pritesh RS | Creative Developer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2c3e50 100%);
+      color: white;
+      overflow-x: hidden;
+      cursor: none;
+      min-height: 100vh;
+    }
+
+    .cursor, .cursor-trail, .cursor-outer {
+      pointer-events: none;
+      position: fixed;
+      z-index: 9999;
+      will-change: transform;
+    }
+
+    .cursor {
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle, #00d4ff, #0099cc);
+      border-radius: 50%;
+      box-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 60px #00d4ff;
+      transition: all 0.1s ease;
+    }
+
+    .cursor-trail {
+      width: 6px;
+      height: 6px;
+      background: rgba(0, 212, 255, 0.6);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      z-index: 9998;
+    }
+
+    .cursor-outer {
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgba(0, 212, 255, 0.3);
+      border-radius: 50%;
+      transition: all 0.15s ease;
+      z-index: 9997;
+    }
+
+    .particle {
+      position: fixed;
+      width: 4px;
+      height: 4px;
+      background: #00d4ff;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9996;
+      opacity: 0.8;
+      transition: opacity 0.5s ease;
+    }
+
+    header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(255, 255, 255, 0.05));
+      overflow: hidden;
+    }
+
+    .hero-content {
+      text-align: center;
+      z-index: 2;
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 700;
+      background: linear-gradient(45deg, #00d4ff, #ffffff, #87ceeb);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: titleGlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes titleGlow {
+      0% { filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5)); }
+      100% { filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.8)); }
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: #87ceeb;
+      margin: 20px 0;
+    }
+
+    .cta-button {
+      padding: 15px 40px;
+      background: linear-gradient(45deg, #00d4ff, #0099cc);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+    }
+
+    .cta-button:hover::before {
+      animation: shine 0.6s ease;
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+
+    .floating-shape {
+      position: absolute;
+      opacity: 0.1;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-shape:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(45deg, #00d4ff, #ffffff);
+      border-radius: 50%;
+    }
+
+    .floating-shape:nth-child(2) {
+      top: 60%;
+      right: 15%;
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(45deg, #ffffff, #87ceeb);
+      border-radius: 20px;
+      animation-delay: 2s;
+    }
+
+    .floating-shape:nth-child(3) {
+      bottom: 20%;
+      left: 20%;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(45deg, #87ceeb, #00d4ff);
+      transform: rotate(45deg);
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    section {
+      padding: 100px 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 3rem;
+      text-align: center;
+      background: linear-gradient(45deg, #00d4ff, #ffffff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 50px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      color: #00d4ff;
+      margin-bottom: 15px;
+    }
+
+    .project-description {
+      color: #b8c5d1;
+    }
+
+    .hover-glow:hover {
+      animation: pulseGlow 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+      100% { box-shadow: 0 0 40px rgba(0, 212, 255, 0.6); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.5rem; }
+      .hero-subtitle { font-size: 1.2rem; }
+      .section-title { font-size: 2rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cursor, .cursor-outer, .cursor-trail {
+        display: none;
+      }
+      body {
+        cursor: default;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor"></div>
+<div class="cursor-outer"></div>
+
+<!-- Header -->
+<header>
+  <div class="floating-shape"></div>
+  <div class="floating-shape"></div>
+  <div class="floating-shape"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Pritesh RS</h1>
+    <p class="hero-subtitle">Creative Developer & Designer</p>
+    <a href="#projects" class="cta-button hover-glow">View My Work</a>
+  </div>
+</header>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2 class="section-title">Featured Projects</h2>
+  <div class="project-grid">
+    <div class="project-card hover-glow">
+      <h3 class="project-title">Visitor Management System</h3>
+      <p class="project-description">A smart system with real-time notifications and secure visitor tracking for institutions.</p>
+    </div>
+    <div class="project-card hover-glow">
+      <h3 class="project-title">Official Website - EDC KPRCAS</h3>
+      <p class="project-description">Responsive and modern landing website for the Entrepreneurship Development Cell at KPRCAS.</p>
+    </div>
+    <div class="project-card hover-glow">
+      <h3 class="project-title">Certificate Portal</h3>
+      <p class="project-description">Simple portal allowing users to download event certificates via secure OTP authentication.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="project-card hover-glow" style="max-width: 800px; margin: 0 auto;">
+    <p class="project-description" style="font-size: 1.1rem; text-align: center;">
+      I'm a passionate developer who loves creating mind-blowing digital experiences.
+      With expertise in modern web technologies and an eye for stunning design,
+      I bring ideas to life through code and creativity.
+    </p>
+  </div>
+</section>
+
+<!-- JavaScript for Cursor -->
+<script>
+  const cursor = document.querySelector('.cursor');
+  const cursorOuter = document.querySelector('.cursor-outer');
+  let mouseX = 0, mouseY = 0;
+
+  // Particle limiter
+  let lastParticleTime = 0;
+
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.left = `${mouseX}px`;
+    cursor.style.top = `${mouseY}px`;
+    cursorOuter.style.left = `${mouseX - 20}px`;
+    cursorOuter.style.top = `${mouseY - 20}px`;
+
+    const now = performance.now();
+    if (now - lastParticleTime > 30) {
+      lastParticleTime = now;
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = `${mouseX}px`;
+      particle.style.top = `${mouseY}px`;
+      document.body.appendChild(particle);
+      setTimeout(() => particle.remove(), 500);
+    }
+  });
+
+  // Cursor Trail
+  const trails = [];
+  for (let i = 0; i < 10; i++) {
+    const trail = document.createElement('div');
+    trail.classList.add('cursor-trail');
+    document.body.appendChild(trail);
+    trails.push({ el: trail, x: 0, y: 0 });
+  }
+
+  function animateTrail() {
+    let x = mouseX;
+    let y = mouseY;
+    trails.forEach(trail => {
+      trail.x += (x - trail.x) * 0.2;
+      trail.y += (y - trail.y) * 0.2;
+      trail.el.style.left = `${trail.x}px`;
+      trail.el.style.top = `${trail.y}px`;
+      x = trail.x;
+      y = trail.y;
+    });
+    requestAnimationFrame(animateTrail);
+  }
+
+  animateTrail();
+</script>
+</body>
+</html>

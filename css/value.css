@@ -1,0 +1,925 @@
+.value_based_pricing_header {
+    background-color: #242438;
+    padding-top: 40px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+.value_based_pricing_header .value_based_pricing_title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    font-family: "fontLatoBold";
+}
+.value_based_pricing_header .value_based_pricing_sub_title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.6875rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-bottom: 2.1875rem;
+    font-family: "fontGraphikRegular";
+    letter-spacing: 0.6px;
+}
+.value_based_pricing_header .achievedLeft {
+    position: absolute;
+    bottom: -227px;
+    left: -396px;
+    z-index: 0;
+}
+.value_based_pricing_header .achievedRight {
+    position: absolute;
+    bottom: -227px;
+    right: -396px;
+    z-index: 0;
+}
+@media only screen and (max-width: 885px) {
+    .value_based_pricing_header .achievedLeft {
+        bottom: -90px;
+        left: -490px;
+    }
+    .value_based_pricing_header .achievedRight {
+        bottom: -90px;
+        right: -490px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .value_based_pricing_header .value_based_pricing_title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 12px;
+    }
+    .value_based_pricing_header .value_based_pricing_sub_title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+    .value_based_pricing_header .achievedLeft {
+        bottom: -113px;
+        left: -520px;
+        z-index: 0;
+    }
+    .value_based_pricing_header .achievedRight {
+        bottom: -113px;
+        right: -520px;
+    }
+}
+.value_based_pricing_header .primary_btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 18px;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+.value_based_pricing_header .primary_btn .btn {
+    min-width: 230px;
+    max-width: 230px;
+    height: 100%;
+    background-color: #665cd7;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    border: 3px solid #665cd7;
+    border-bottom: none;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+.value_based_pricing_header .primary_btn .btn h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    white-space: pre-wrap;
+    margin-bottom: 2px;
+}
+.value_based_pricing_header .primary_btn .btn p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    white-space: pre-wrap;
+    margin: 0;
+}
+.value_based_pricing_header .primary_btn .btn.active {
+    background: linear-gradient(180deg, #dff2f6 0%, #eff8f6 100%);
+}
+.value_based_pricing_header .primary_btn .btn.active h4 {
+    color: #000000;
+}
+.value_based_pricing_header .primary_btn .btn.active p {
+    color: #43434b;
+}
+@media only screen and (max-width: 550px) {
+    .value_based_pricing_header .primary_btn {
+        width: 100%;
+        gap: 10px;
+        overflow-y: scroll;
+        justify-content: flex-start;
+    }
+    .value_based_pricing_header .primary_btn .btn {
+        min-width: 220px !important;
+        max-width: 230px;
+        height: 102px;
+    }
+    .value_based_pricing_header .primary_btn .btn.active {
+        height: 112px;
+    }
+}
+
+.value_based_pricing {
+    padding: 50px 0 150px 0;
+    background: linear-gradient(180deg, #eff8f6 0%, #dff2f6 100%);
+    margin-top: -0.51px;
+    margin-bottom: 160px;
+    position: relative;
+    /* Clear floats after the columns */
+}
+.value_based_pricing .sliderRoot {
+    margin: 40px 0 120px 0;
+    width: 100%;
+    border: 1px solid #d0e2e6;
+    padding: 2px 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+    .value_based_pricing .sliderRoot {
+        padding: 2px 14px;
+    }
+}
+.value_based_pricing .timer {
+    background-color: #242438;
+    border-radius: 23px;
+    padding: 4px 16px 6px 16px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 30px 0 26px 0;
+}
+.value_based_pricing .timer img {
+    margin-right: 4px;
+    margin-bottom: 3px;
+}
+@media only screen and (max-width: 767px) {
+    .value_based_pricing .timer {
+        padding: 4px 12px 4px 12px;
+        font-size: 14px;
+    }
+}
+.value_based_pricing .sliderContainer {
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.value_based_pricing .sliderContainer .slider {
+    -webkit-appearance: none;
+    width: 120%;
+    height: 4px;
+    background: #eff8f6;
+    outline: none;
+    border-radius: 12px;
+}
+.value_based_pricing .sliderContainer .selector {
+    width: 0;
+    height: 4px;
+    background-color: #665cd7;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    border-radius: 12px;
+}
+.value_based_pricing .sliderContainer .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #665cd7;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 8px solid #ffffff;
+    box-sizing: content-box;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
+    position: relative;
+    z-index: 2;
+}
+.value_based_pricing .sliderContainer .slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #665cd7;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 8px solid #ffffff;
+    box-sizing: content-box;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
+    position: relative;
+    z-index: 2;
+}
+.value_based_pricing .sliderContainer #rangeValue {
+    font-size: 12px;
+}
+.value_based_pricing .sliderContainer .tooltiptext {
+    background-color: #242438;
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    padding: 5px 8px;
+    font-weight: 600;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 10;
+    bottom: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.value_based_pricing .sliderContainer .tooltiptext::before {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    border: 7px solid transparent;
+    border-bottom-color: transparent;
+    border-top-color: #242438;
+    left: 50%;
+    margin-left: -5.5px;
+}
+.value_based_pricing .sliderContainer .steppers {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 2.5px;
+}
+.value_based_pricing .sliderContainer .steppers .stepper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+.value_based_pricing .sliderContainer .steppers .tip {
+    background-color: #665cd7;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    padding: 1px 10px 2px 10px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+.value_based_pricing .sliderContainer .steppers .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #665cd7;
+    border-radius: 50%;
+}
+.value_based_pricing .sliderContainer .steppers .label {
+    color: #2b2a35;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+@media only screen and (max-width: 767px) {
+    .value_based_pricing .sliderContainer {
+        height: 12px;
+    }
+    .value_based_pricing .sliderContainer .slider::-webkit-slider-thumb {
+        width: 16px;
+        height: 16px;
+        border: 6px solid #ffffff;
+    }
+    .value_based_pricing .sliderContainer .slider::-moz-range-thumb {
+        width: 24px;
+        height: 24px;
+        border: 8px solid #ffffff;
+    }
+    .value_based_pricing .sliderContainer .steppers .tip {
+        font-size: 12px;
+        padding: 2px 6px 2px 6px;
+    }
+    .value_based_pricing .sliderContainer .steppers .dot {
+        width: 8px;
+        height: 8px;
+    }
+    .value_based_pricing .sliderContainer .tooltiptext {
+        font-size: 10px;
+        padding: 2px 6px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.value_based_pricing .value_based_pricing_bg {
+    position: absolute;
+    top: 0;
+    background-image: url("/images/priceTableBg.svg");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+.value_based_pricing .value_based_pricing_container {
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+.value_based_pricing .bg_img {
+    position: relative;
+    overflow: hidden;
+}
+.value_based_pricing .bg_img .rightCircle {
+    position: absolute;
+    top: 20%;
+    right: -85px;
+}
+.value_based_pricing .bg_img .leftCircle {
+    position: absolute;
+    bottom: 20%;
+    left: -85px;
+}
+@media only screen and (max-width: 1200px) {
+    .value_based_pricing {
+        margin-bottom: 180px;
+        padding: 30px 0 180px 0;
+    }
+}
+@media only screen and (max-width: 922px) {
+    .value_based_pricing {
+        margin-bottom: 210px;
+        padding: 30px 0 210px 0;
+    }
+}
+@media only screen and (max-width: 766px) {
+    .value_based_pricing {
+        margin-bottom: 260px;
+        padding: 30px 0 280px 0;
+    }
+}
+@media only screen and (max-width: 572px) {
+    .value_based_pricing {
+        margin-bottom: 230px;
+        padding: 30px 0 260px 0;
+    }
+    .value_based_pricing .bg_img .rightCircle {
+        position: absolute;
+        top: 20%;
+        right: -85px;
+    }
+    .value_based_pricing .bg_img .leftCircle {
+        position: absolute;
+        bottom: 10%;
+        left: -85px;
+    }
+}
+@media only screen and (max-width: 372px) {
+    .value_based_pricing {
+        margin-bottom: 265px;
+        padding: 30px 0 260px 0;
+    }
+}
+.value_based_pricing .titleContainer {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px auto 16px auto;
+}
+.value_based_pricing .titleContainer h3 {
+    color: #2b2a35;
+    font-size: 18px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+}
+.value_based_pricing .titleContainer p {
+    color: #2b2a35;
+    font-size: 16px;
+    margin-bottom: 12px;
+    position: relative;
+    text-align: center;
+}
+.value_based_pricing .titleContainer p span {
+    color: #665cd7;
+    font-weight: 600;
+}
+@media screen and (max-width: 560px) {
+    .value_based_pricing .titleContainer .titleBottom {
+        width: 70%;
+    }
+}
+.value_based_pricing .addOnsContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px auto 16px auto;
+}
+.value_based_pricing .addOnsContainer h3 {
+    color: #2b2a35;
+    font-size: 24px;
+    margin-bottom: 9px;
+    font-weight: 600;
+    line-height: 44px;
+    text-align: center;
+}
+.value_based_pricing .addOnsContainer h3 span {
+    color: #665cd7;
+    font-weight: 600;
+    position: relative;
+}
+.value_based_pricing .addOnsContainer h3 ::before {
+    content: "";
+    background-image: url(/images/titleBottom.svg);
+    background-repeat: no-repeat;
+    width: 120%;
+    height: 8px;
+    position: absolute;
+    left: -11px;
+    bottom: -10px;
+}
+@media only screen and (max-width: 572px) {
+    .value_based_pricing .addOnsContainer h3 {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+.value_based_pricing .table_container {
+    max-width: 100%;
+    margin: auto;
+    overflow: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 2;
+    min-height: 400px;
+}
+.value_based_pricing .table_container .table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100% !important;
+}
+.value_based_pricing .table_container .table .tableCard:nth-last-child(1) {
+    border-radius: 0 8px 8px 0;
+}
+.value_based_pricing .table_container .table .tableCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
+    border: 1px solid #d0e2e6;
+    max-width: 390px;
+    min-width: 290px;
+    background-color: #fff;
+    min-height: 395px !important;
+}
+.value_based_pricing .table_container .table .tableCard .ipText {
+    color: #43434b;
+    font-size: 16px;
+    margin-bottom: 0;
+    list-style: "★";
+    padding-left: 4px;
+    margin-bottom: 5px;
+}
+.value_based_pricing .table_container .table .tableCard .includes .includes_title {
+    color: #43434b;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.value_based_pricing .table_container .table .tableCard .includes ul {
+    padding-left: 17px;
+    margin: 0;
+}
+.value_based_pricing .table_container .table .tableCard .includes ul li {
+    color: #43434b;
+    font-size: 16px;
+}
+.value_based_pricing .table_container .table .tableCard .includes.ip {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 12px;
+    height: 100% !important;
+}
+.value_based_pricing .table_container .table .tableCard .includes.ip .ipContainer {
+    background-color: rgba(255, 233, 83, 0.1607843137);
+    border: 1px solid #ffe953;
+    padding: 16px;
+    border-radius: 8px;
+}
+.value_based_pricing .table_container .table .tableCard .pointListContainer {
+    width: 100%;
+}
+.value_based_pricing .table_container .table .tableCard .pointList {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.value_based_pricing .table_container .table .tableCard .pointList p {
+    color: #43434b;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+    margin: 0;
+    text-align: left;
+}
+.value_based_pricing .table_container .table .tableCard .pointList p span {
+    margin-right: 5px;
+    color: #43434b;
+    font-size: 12px;
+}
+.value_based_pricing .table_container .table .tableCard .pointList .labelContainer {
+    background-color: #ffe953;
+    border-radius: 23px;
+    padding: 2px 3px;
+    min-width: 96px;
+    align-self: center;
+}
+.value_based_pricing .table_container .table .tableCard .pointList .labelContainer .label {
+    text-align: center;
+    font-size: 12px;
+    line-height: 26px;
+    font-weight: 600;
+    margin: 0;
+}
+.value_based_pricing .table_container .table .tableCard.add_ons_card {
+    min-height: auto !important;
+    max-width: 100% !important;
+    min-width: 100%;
+}
+.value_based_pricing .table_container .table .tableCard.add_ons_card .includes .includes_title {
+    margin-bottom: 12px;
+    text-align: center;
+}
+.value_based_pricing .table_container .table .tableCard.add_ons_card .includes ul li {
+    text-align: center;
+    list-style-type: none;
+}
+.value_based_pricing .table_container .table .tableCard.plan {
+    border: 2px solid #665cd7;
+    border-radius: 8px;
+    max-width: 340px;
+    padding: 18px 28px 24px 28px;
+}
+.value_based_pricing .table_container .table .tableCard.plan .titleContainer {
+    position: relative;
+    margin-bottom: 12px;
+}
+.value_based_pricing .table_container .table .tableCard.plan .feature_title {
+    color: #43434b;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "fontGraphikSemiBold";
+    text-align: center;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.value_based_pricing .table_container .table .tableCard.plan .planDescription {
+    color: #43434b;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+.value_based_pricing .table_container .table .tableCard.plan .hours {
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #ffe953;
+    padding: 10px 16px;
+    margin: 0;
+    border-radius: 23px;
+    margin-bottom: 8px;
+    transition: all 0.8s;
+    min-width: 170px;
+    text-align: right;
+}
+.value_based_pricing .table_container .table .tableCard.plan .storyBook {
+    font-size: 16px;
+    font-weight: 600;
+    color: #43434b;
+    transition: all 0.3s;
+    min-width: 107px;
+    text-align: right;
+    margin-bottom: 16px;
+    margin-top: 10px;
+}
+.value_based_pricing .table_container .table .tableCard.plan .hypLink {
+    margin: 10px 0 14px 0;
+    text-decoration: underline;
+    font-size: 12px;
+    color: #665cd7;
+    cursor: pointer;
+    font-weight: 600;
+}
+@media only screen and (max-width: 767px) {
+    .value_based_pricing .table_container .table .tableCard:nth-last-child(1) {
+        border-radius: 0 0 8px 8px;
+    }
+}
+.value_based_pricing .adonsList {
+    margin-top: 26px;
+}
+.value_based_pricing .adonsList ul {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    -moz-column-gap: 7%;
+    column-gap: 7%;
+    flex-wrap: wrap;
+    margin: 0;
+}
+.value_based_pricing .adonsList ul li {
+    color: #2b2a35;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+.value_based_pricing .adonsList ul li .content {
+    display: flex;
+    gap: 6px;
+}
+.value_based_pricing .adonsList ul li .recommended {
+    color: #fff;
+    background-color: #f3806e;
+    padding: 3px 8px 2px 8px;
+    border-radius: 23px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.04rem;
+    margin-top: 2px;
+    align-self: baseline;
+}
+@media only screen and (max-width: 767px) {
+    .value_based_pricing .adonsList ul {
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+    .value_based_pricing .adonsList ul li .content {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .value_based_pricing .table_container {
+        max-width: 100% !important;
+    }
+    .value_based_pricing .table_container .table .tableCard {
+        min-width: 100% !important;
+        max-width: 100% !important;
+        min-height: auto !important;
+        max-height: auto !important;
+    }
+    .value_based_pricing .table_container.width-70 {
+        max-width: 100% !important;
+    }
+    .value_based_pricing .table_container.width-50 {
+        max-width: 100% !important;
+    }
+}
+.value_based_pricing .table_container.width-70 {
+    max-width: 70%;
+}
+.value_based_pricing .table_container.width-50 {
+    max-width: 50%;
+}
+.value_based_pricing .get_start_button {
+    width: 100%;
+    cursor: pointer;
+    padding: 8px 20px;
+    background-color: #665cd7;
+    font-size: 16px;
+    color: #ffffff;
+    border: 1px solid #665cd7;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    outline: none !important;
+    transition: 0.5s;
+}
+.value_based_pricing .get_start_button.outline {
+    background-color: #ffffff;
+    border: 1px solid #665cd7;
+    color: #665cd7;
+}
+.value_based_pricing .value_based_pricing_title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    font-family: "fontLatoBold";
+}
+.value_based_pricing .value_based_pricing_sub_title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.6875rem;
+    color: #43434b;
+    text-align: center;
+    margin-bottom: 2.1875rem;
+    font-family: "fontGraphikRegular";
+    letter-spacing: 0.6px;
+}
+.value_based_pricing .absolute-card {
+    position: absolute;
+    top: 0px;
+    min-height: 262px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #242438;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.value_based_pricing .absolute-card .card-padding {
+    padding: 30px 36px 0px 38px;
+    position: relative;
+    z-index: 2;
+}
+.value_based_pricing .absolute-card .card-padding2 {
+    padding: 0px 0px 24px 32px;
+    position: relative;
+    z-index: 2;
+}
+.value_based_pricing .absolute-card .priceAbCard {
+    position: absolute;
+    right: -477px;
+    top: -30px;
+}
+@media only screen and (max-width: 576px) {
+    .value_based_pricing .absolute-card .card-padding {
+        padding: 16px 26px 0px 26px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .value_based_pricing .absolute-card .card-padding2 {
+        padding: 0px 0px 24px 0px;
+    }
+    .value_based_pricing .absolute-card .priceAbCard {
+        opacity: 30%;
+    }
+}
+.value_based_pricing .absolute-card .card_title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+    font-family: "fontLatoBold";
+}
+.value_based_pricing .absolute-card .card_sub_title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6875rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+.value_based_pricing .absolute-card .card_sub_title2 {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.6875rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.1rem;
+}
+.value_based_pricing .absolute-card .line {
+    background-color: #ffe953;
+    border-radius: 8px;
+    width: 33px;
+    padding: 2px 0;
+    margin-bottom: 0.8rem;
+}
+@media only screen and (max-width: 576px) {
+    .value_based_pricing .absolute-card .card_title {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 12px;
+    }
+    .value_based_pricing .absolute-card .card_sub_title {
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 16px;
+    }
+    .value_based_pricing .absolute-card .card_sub_title2 {
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 16px;
+    }
+}
+.value_based_pricing .absolute-card .chip_container {
+    display: flex;
+    padding: 2px 8px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    row-gap: 16px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+@media only screen and (max-width: 767px) {
+    .value_based_pricing .absolute-card .chip_container {
+        padding: 10px;
+        margin-left: 12px;
+        width: 100%;
+        display: block;
+    }
+}
+.value_based_pricing .absolute-card .chip_container .chip {
+    background-color: rgba(238, 238, 242, 0.1215686275);
+    border-radius: 23px;
+    padding: 12px 16px;
+}
+.value_based_pricing .absolute-card .chip_container .chip .chip_text {
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-family: "fontLatoBold";
+}
+@media only screen and (max-width: 767px) {
+    .value_based_pricing .absolute-card .chip_container .chip {
+        border-radius: 18px;
+        padding: 8px 12px;
+        margin-bottom: 16px;
+    }
+    .value_based_pricing .absolute-card .chip_container .chip .chip_text {
+        font-size: 14px;
+    }
+}
+.value_based_pricing .talk_to_as_skew {
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(130deg, transparent 0%, transparent 20%, #ffffff 20%, #ffffff 100%);
+    padding: 12px 20px 12px 100px;
+    width: 340px;
+}
+.value_based_pricing .talk_to_as_skew span {
+    font-size: 1.15rem;
+    color: #665cd7;
+    font-weight: 600;
+}
+.value_based_pricing .talk_to_as_skew span .phone_icon {
+    width: 25px;
+    height: 24px;
+    margin: 0px 0 3px 5px;
+}
+@media only screen and (max-width: 767px) {
+    .value_based_pricing .talk_to_as_skew {
+        padding: 8px 20px 8px 80px;
+        width: 280px;
+    }
+    .value_based_pricing .talk_to_as_skew span {
+        font-size: 0.9rem;
+    }
+    .value_based_pricing .talk_to_as_skew span .phone_icon {
+        width: 18px;
+        height: 18px;
+        margin: 0px 0 3px 5px;
+    }
+}
+.value_based_pricing .talk_to_as_skew.bg {
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    width: 104%;
+    filter: invert(30%);
+    z-index: 1;
+    opacity: 50%;
+}
+@media only screen and (max-width: 576px) {
+    .value_based_pricing .value_based_pricing_title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 12px;
+    }
+    .value_based_pricing .value_based_pricing_sub_title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+}

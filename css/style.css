@@ -21,9 +21,6 @@
     }
 }
 
-.header_mobile .header_text .banner_text_1 {
-    font-size: 3.25rem;
-}
 
 
 
@@ -63,3 +60,176 @@
     transition: 0.7s;
 }
 
+
+.header_mobile .header_text .banner_text_1 {
+    font-size: 3.25rem;
+}
+
+
+.logo_section_title {
+    font-size: 40px;
+    font-family: 'Alito Arabic', serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.brands_logos {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.brands_logos1 {
+    max-width: 50%;
+    height: auto;
+    padding: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brands_logos2 {
+    max-width: 70%;
+    height: auto;
+    padding: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.years {
+    max-width: 100px;
+    height: auto;
+   }
+
+
+.offering_products .card:hover {
+    transform: translateY(-6px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.offering_products {
+    padding: 1.25rem 0;
+    margin-bottom: 10px;
+}
+
+.offering_products .card_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.offering_products .card_container .card {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 28px 40px 40px 40px;
+    min-width: 352px;
+    max-width: 352px;
+    position: relative;
+}
+
+.offering_products .card_container .card::after,
+.offering_products .card_container .card::before {
+    content: "";
+    background-color: #fff;
+    padding: 12px;
+    position: absolute;
+    top: 11%;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+
+.offering_products .card_container .card::after {
+    left: -12px;
+}
+
+.offering_products .card_container .card::before {
+    right: -12px;
+}
+
+.offering_products .card_container .card .card_icon {
+    width: 24px;
+    height: 34px;
+    margin-bottom: 12px;
+}
+
+.offering_products .card_container .card .card_title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 0.875rem;
+}
+
+.offering_products .card_container .card p {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #43434b;
+}
+
+.offering_products .texxt {
+    font-size: 2.625rem;
+    line-height: 1.95rem;
+    color: #43434b;
+    margin-bottom: 0.5rem;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Chip Styles */
+.chip {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #fff;
+    border-radius: 50px;
+    margin-right: 12px;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
+    color: #333;
+}
+
+/* Marquee Animation */
+.chip-marquee {
+    animation: scroll-marquee 40s linear infinite;
+    display: inline-flex;
+    gap: 1rem;
+}
+
+@keyframes scroll-marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.bg-light-custom {
+    background-color: #f9f9fd;
+}
+
+.card_icon {
+    height: 30px;
+}
